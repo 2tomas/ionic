@@ -11,18 +11,32 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="chat-content" >
+<ion-content>
   <ion-list lines="none">
-    <ion-item *ngFor="let men of item | async" class="message-item">
+    <div class="message-item" *ngFor="let men of item | async"  [class.left]="men.usuario === user" [class.right]="!(men.usuario === user)">
       <div class="message-bubble">
         <span class="user-name">{{ men.usuario }}</span>
         <span class="message-text">{{ men.mensaje }}</span>
         <span class="message-time">{{ men.fecha }}</span>
       </div>
-    </ion-item>
+    </div>
   </ion-list>
+</ion-content>
+
+
 
   <ion-footer class="footer">
+    <ion-toolbar>
+      <ion-item lines="none" class="message-input">
+        <ion-input type="text" [(ngModel)]="valor" placeholder="Escribe tu mensaje" (keydown.enter)="agregar()"></ion-input>
+        <ion-button (click)="agregar()" color="primary" class="send-button">
+          <img src="..\..\assets\icon\786306.png" alt="Enviar" class="send-icon">
+        </ion-button>
+      </ion-item>
+    </ion-toolbar>
+  </ion-footer>
+
+    <ion-footer>
     <ion-toolbar>
       <ion-item lines="none" class="message-input">
         <ion-input type="text" [(ngModel)]="valor" placeholder="Escribe tu mensaje" (keydown.enter)="agregar()"></ion-input>
