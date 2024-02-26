@@ -1,0 +1,90 @@
+  .message-item {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .message-bubble {
+    background-color: #005C4B; /* Color de fondo de la burbuja del mensaje */
+    color: #fff; /* Color del texto del mensaje */
+    padding-top: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+    margin: 2px; 
+  }
+  
+  .user-name {
+    margin-right: 5px; 
+    font-weight: bold;
+    font-size: 10px;
+    margin-bottom: 5px;
+    color: #b82b2b;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: baseline; /* Alinea los elementos en la misma línea base */
+  }
+
+  .message-time {
+    float: right;
+    bottom: 0;
+    font-size: 0.8em;
+    color: #699F95;
+    font-size: 9px;
+  }
+
+  .message-text {
+    display: block; /* Asegura que el mensaje esté en una línea separada */
+    color: #DAE7E5;
+    margin-right: 19px;
+  }
+  
+  .message-input ion-input {
+    border: 1px solid #ccc; /* Borde del input */
+    border-radius: 20px; /* Radio del borde del input */
+    padding: 10px; /* Espaciado interno del input */
+    font-size: 14px; /* Tamaño de fuente del input */
+  }
+  
+  .message-input ion-button {
+    border-radius: 20px; /* Radio del borde del botón */
+    margin-left: 10px; /* Espacio entre el input y el botón */
+  }
+
+  .message-input ion-button.send-button {
+    width: 40px; /* Ancho del botón */
+    height: 40px; /* Altura del botón */
+    border-radius: 50%; /* Hace que el botón sea circular */
+    padding: 0; /* Elimina cualquier relleno interno */
+  }
+  
+  .send-icon {
+    width: 100%; /* Ajusta el ancho de la imagen al tamaño del botón */
+    height: auto; /* Ajusta la altura de la imagen automáticamente */
+  }
+  
+  .send-button {
+    margin-left: 10px;
+  }
+
+
+  ion-button[icon-only] {
+    --background: transparent;
+    --color: #000;
+  }
+  
+  ion-button[icon-only]:hover {
+    --background: transparent;
+    --color: #555;
+  }
+
+  .chat-content {
+    margin-bottom: 50px; /* Altura del footer */
+  }
+  
+  .footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+  }

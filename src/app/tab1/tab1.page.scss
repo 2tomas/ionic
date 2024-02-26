@@ -1,0 +1,20 @@
+ion-content {
+  --background: #f4f4f4;
+}
+
+ion-button {
+  margin: 10px auto;
+}
+
+ion-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+ion-button[color="primary"] {
+  --background: #3880ff;
+}
+
+ion-button[color="success"] {
+  --background: #2dd36f;
+}

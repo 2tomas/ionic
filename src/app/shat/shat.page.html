@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Bienvenidos al shat
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        Logout
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="chat-content" >
+  <ion-list lines="none">
+    <ion-item *ngFor="let men of item | async" class="message-item">
+      <div class="message-bubble">
+        <span class="user-name">{{ men.usuario }}</span>
+        <span class="message-text">{{ men.mensaje }}</span>
+        <span class="message-time">{{ men.fecha }}</span>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <ion-footer class="footer">
+    <ion-toolbar>
+      <ion-item lines="none" class="message-input">
+        <ion-input type="text" [(ngModel)]="valor" placeholder="Escribe tu mensaje" (keydown.enter)="agregar()"></ion-input>
+        <ion-button (click)="agregar()" color="primary" class="send-button">
+          <img src="..\..\assets\icon\786306.png" alt="Enviar" class="send-icon">
+        </ion-button>
+      </ion-item>
+    </ion-toolbar>
+  </ion-footer>
+  
