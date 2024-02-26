@@ -2,6 +2,16 @@
     display: flex;
     justify-content: flex-end;
   }
+
+  .left {
+    justify-content: flex-end;
+
+  }
+
+  .right {
+    justify-content: flex-start;
+    margin-right: 10px;
+  }
   
   .message-bubble {
     background-color: #005C4B; /* Color de fondo de la burbuja del mensaje */
@@ -10,7 +20,9 @@
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 10px;
-    margin: 2px; 
+    margin-top: 2px;
+    margin-left: 5px; 
+    margin-right: 10px;
   }
   
   .user-name {
@@ -79,12 +91,12 @@
     --color: #555;
   }
 
-  .chat-content {
-    margin-bottom: 50px; /* Altura del footer */
-  }
   
   .footer {
-    position: sticky;
+    position: absolute;
     bottom: 0;
     width: 100%;
   }
+
+  
+
