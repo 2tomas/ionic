@@ -1,17 +1,30 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="floating">Correo electrónico</ion-label>
+    <ion-input type="email" [(ngModel)]="usuario.email"></ion-input>
+  </ion-item>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-item>
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="usuario.contrasena"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Nombre de usuario</ion-label>
+    <ion-input type="text" [(ngModel)]="usuario.usuario"></ion-input> 
+  </ion-item>
+
+  <ion-button expand="block" color="success" (click)="register()">
+    Registrarse
+  </ion-button>
+
+  <ion-button expand="block" color="medium" (click)="goToHome()">
+    Cancelar
+  </ion-button>
 </ion-content>
